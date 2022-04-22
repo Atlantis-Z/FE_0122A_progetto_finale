@@ -12,7 +12,7 @@ export class Myhttp implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     let authReq: HttpRequest<any> = req.clone({
-      headers: req.headers.set('Authorization','Bearer ' +'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY1MDYxMTYzOCwiZXhwIjoxNjUwNjk4MDM4fQ.mNUR55pquZgnskGq-5Cv7jp-9ETDFF8JkKSAe7w3l6Y2OLwVwypyjtsXfttP9kGzYM9dq5auUB4esHdn28YJOg').set('X-TENANT-ID', 'fe_0122a')
+      headers: req.headers.set('Authorization','Bearer ' +'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY1MDYxMzE3MywiZXhwIjoxNjUyNzYwNjU3fQ.c4acV5QLQzuKK0IVjsRpM2JIo6BMBSEEQdGtqaLk3mICK_Mdo5qDzpuWJQIZCbrnmUMHnmtLQ6hlnSylLzJWLg').set('X-TENANT-ID', 'fe_0122a')
     });
     return next.handle(authReq);
   }
